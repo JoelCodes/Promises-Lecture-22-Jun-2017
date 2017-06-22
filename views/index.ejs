@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .success {
+      color: deepskyblue;
+      font-size: 2em;
+    }
+    .error {
+      color: tomato;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Just Your Average Website</h1>
+  <form action='/' method='POST'>
+    <p><textarea name='nums'><%= nums %></textarea></p>
+    <p><button type='submit'>Find Average</button></p>
+  </form>
+  <% if(locals.success){ %>
+    <p class='success'><%= success %></p>
+  <%}%>
+  <% if(locals.error){ %> 
+    <p class="error"><%= error %></p>
+  <% } %>
+</body>
+</html>
